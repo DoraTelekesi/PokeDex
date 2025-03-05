@@ -48,7 +48,6 @@ header img {
 }
 
 main {
-  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +68,6 @@ main {
 .poke-card {
   height: 280px;
   width: 250px;
-  /* background-color: rgb(21, 21, 155); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,102 +126,4 @@ footer {
   font-size: 30px;
 }
 
-.modal-content {
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  top: 30px;
-  height: 650px;
-  width: 440px;
-  border-radius: 1rem;
-  font-family: "Outfit", sans-serif;
-  border: 2px solid black;
-}
 
-.modal-img {
-  height: 220px;
-  width: 220px;
-}
-
-.modal-img-content {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 170px;
-  background-color: rgba(39, 43, 58);
-  width: 100%;
-  color: blanchedalmond;
-  border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
-}
-
-.modal-type {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  color: blanchedalmond;
-  width: 100%;
-  height: 170px;
-  background-color: rgba(39, 43, 58);
-}
-
-.modal-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 35px;
-  width: 100%;
-  border: 1px solid rgb(63, 117, 99);
-  border-bottom: 4px solid rgb(219, 151, 25);
-}
-
-.modal-btn:hover {
-  cursor: pointer;
-  color: rgb(167, 157, 24);
-}
-
-.modal-btns {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  color: blanchedalmond;
-  background-color: rgb(35, 65, 55);
-}
-
-.modal-closed {
-  visibility: hidden;
-}
-
-.overlay-dp-none {
-  display: none;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.375);
-}
-
-.info-body {
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  padding: 20px;
-  background-color: rgb(114, 182, 159);
-  height: 100%;
-  width: 100%;
-  color: rgb(22, 20, 18);
-  border-radius: 0 0 calc(1rem - 1px) calc(1rem - 1px);
-}
