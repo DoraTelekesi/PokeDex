@@ -1,4 +1,4 @@
-let BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=130"
+let BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0"
 
 
 function init() {
@@ -18,7 +18,6 @@ async function fetchPokemonList() {
   }
 
 let URLS = [];
-
 function getPokemonUrls(arr){
   for (let indexUrl = 0; indexUrl < arr.length; indexUrl++) {
     URLS.push(arr[indexUrl]);
@@ -43,22 +42,5 @@ function getTypes(pokemonItems){
   return typesHTML;
 }
 
-function getStats(pokemonItems){
-  let statsHTML = "";
-  for (let i= 0; i < pokemonItems.stats.length; i++) {
-    let percent= pokemonItems.stats[i].base_stat / 110;
-    percent = Math.round(percent * 100)
-    statsHTML += `<tr><td>${pokemonItems.stats[i].stat.name}</td><td>:</td><td><div class="progress-bar"><div class="progress-bar-filling" style="width:${percent}%"></div></div></td></tr>`;
-  }
-  return statsHTML;
-}
-
-function getAbilities(pokemonItems){
-  abilitiesArr = [];
-  for (let i =0; i < pokemonItems.abilities.length; i++) {
-    abilitiesArr.push(pokemonItems.abilities[i].ability.name)
-  }
-  return abilitiesArr;
-}
 
 

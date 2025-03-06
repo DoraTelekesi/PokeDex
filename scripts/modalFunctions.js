@@ -1,3 +1,21 @@
+function getStats(pokemonItems){
+  let statsHTML = "";
+  for (let i= 0; i < pokemonItems.stats.length; i++) {
+    let percent= pokemonItems.stats[i].base_stat / 110;
+    percent = Math.round(percent * 100)
+    statsHTML += `<tr><td>${pokemonItems.stats[i].stat.name}</td><td>:</td><td><div class="progress-bar"><div class="progress-bar-filling" style="width:${percent}%"></div></div></td></tr>`;
+  }
+  return statsHTML;
+}
+
+function getAbilities(pokemonItems){
+  abilitiesArr = [];
+  for (let i =0; i < pokemonItems.abilities.length; i++) {
+    abilitiesArr.push(pokemonItems.abilities[i].ability.name)
+  }
+  return abilitiesArr;
+}
+
 function openModal(pokemonItems){
     document.getElementById("modal-content").innerHTML = modalTemplate(pokemonItems);
     document.getElementById("modal-content").classList.remove("modal-closed");
