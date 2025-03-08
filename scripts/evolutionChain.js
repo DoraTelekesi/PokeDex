@@ -7,38 +7,6 @@ async function fetchJson(url) {
   }
 }
 
-function evolutionHTMLtemplate(imgUrl, name) {
-  return `<div class="evo-imgs">
-    <img class="evo-img" src="${imgUrl}">
-    <div class="evo-names">
-    <p>${name}</p>
-    </div>
-    </div>`;
-}
-
-function evolutionHTMLtemplateForMoreMembers(imgUrl, name) {
-  return `<div class="separator">>></div>
-  <div class="evo-imgs">
-  <img class="evo-img" src="${imgUrl}">
-  <div class="evo-names">
-  <p>${name}</p>
-  </div>
-  </div>`;
-}
-
-function evolutionHTMLtemplateForThreeMembers(imgUrl2, imgUrl3, name2, name3) {
-  return `<div class="separator">>></div><div class="evo-imgs">
-  <img class="evo-img" src="${imgUrl2}">
-  <div class="evo-names">
-  <p>${name2}</p>
-  </div>
-  </div>
-  <div class="separator">>></div><div class="evo-imgs">
-  <img class="evo-img" src="${imgUrl3}">
-  <div class="evo-names"><p>${name3}</p>
-  </div> 
-  </div>`;
-}
 
 async function fetchEvolutionData(url) {
   let speciesData = await fetchJson(url);

@@ -139,3 +139,38 @@
   display: flex;
   align-items: center;
 }
+
+.angle-right {
+  height: 20px;
+  width: 20px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #728e9b;
+  border: 0px none #ffffff;
+  border-radius: 52px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 44, 68, 0.792);
+  border: 0px none #ffffff;
+  border-radius: 45px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

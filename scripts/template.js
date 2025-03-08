@@ -43,3 +43,54 @@ function modalTemplate(pokemonItems) {
             </div>
             </div>`;
   }
+function evolutionHTMLtemplate(imgUrl, name) {
+    return `<div class="evo-imgs">
+      <img class="evo-img" src="${imgUrl}">
+      <div class="evo-names">
+      <p>${name}</p>
+      </div>
+      </div>`;
+  }
+  
+function evolutionHTMLtemplateForMoreMembers(imgUrl, name) {
+    return `<div class="separator"><img
+              class="angle-right"
+              src="./assets/icons/angles-right-solid.svg"
+              alt="angle right"
+            /></div>
+            <div class="evo-imgs">
+            <img class="evo-img" src="${imgUrl}">
+            <div class="evo-names">
+            <p>${name}</p>
+            </div>
+            </div>`;
+  }
+  
+function evolutionHTMLtemplateForThreeMembers(imgUrl2, imgUrl3, name2, name3) {
+    return `<div class="separator">
+            <img
+              class="angle-right"
+              src="./assets/icons/angles-right-solid.svg"
+              alt="angle right"
+            /></div><div class="evo-imgs">
+            <img class="evo-img" src="${imgUrl2}">
+            <div class="evo-names">
+            <p>${name2}</p>
+            </div>
+            </div>
+            <div class="separator">
+            <img
+              class="angle-right"
+              src="./assets/icons/angles-right-solid.svg"
+              alt="angle right"
+            /></div><div class="evo-imgs">
+            <img class="evo-img" src="${imgUrl3}">
+            <div class="evo-names"><p>${name3}</p>
+            </div> 
+            </div>`;
+  }
+
+function searchFieldTemplate(){
+    return `<label for="pokemon-search">Which Pokemon are you looking for?</label>
+            <input type="text" id="pokemon-search" onkeyup="keyUpFunction()" />`
+  }

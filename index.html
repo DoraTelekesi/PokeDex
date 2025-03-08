@@ -17,13 +17,30 @@
         </div>
       </header>
       <main>
+        <div class="search-field" id="search-field"></div>
+
         <div class="main-content" id="main-content"></div>
+
         <div class="modal-content modal-closed" id="modal-content"></div>
+        <div class="loading-screen spinner-dp-none">
+          <img
+            class="loading-img"
+            src="./assets/img/pokeball-loading.gif"
+            alt=""
+          />
+        </div>
         <div
           class="overlay overlay-dp-none"
           onclick="closeModal()"
           id="overlay"
         ></div>
+        <div
+          class="load-more-pokemon"
+          onclick="loadMorePokemon()"
+          id="more-pokemon"
+        >
+          Load more Pokemon
+        </div>
       </main>
       <footer>
         <div class="footer-content">
@@ -35,5 +52,6 @@
     <script src="./scripts/evolutionChain.js"></script>
     <script src="./scripts/template.js"></script>
     <script src="./scripts/modalFunctions.js"></script>
+    <script src="./scripts/searchFieldFunctions.js"></script>
   </body>
 </html>
