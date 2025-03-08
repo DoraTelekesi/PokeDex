@@ -1,6 +1,6 @@
 async function keyUpFunction(){
   let inputValueRef = document.getElementById("pokemon-search")
-  if (inputValueRef.value.length > 0){
+  if (inputValueRef.value.length > 2){
     searchNames(allPokemonItem);
   } else if(inputValueRef.value === "") {
 
@@ -9,9 +9,9 @@ async function keyUpFunction(){
       showNewPokemon(newUrls);
     }
   
-  else {
-    inputValueRef.value = "";
-  }
+  // else {
+  //   inputValueRef.value = "";
+  // }
 }
 
 function searchNames(arr) {

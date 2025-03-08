@@ -17,6 +17,7 @@ function getAbilities(pokemonItems){
 }
 
 function openModal(pokemonItems){
+  console.log(typeof pokemonItems)
     document.getElementById("modal-content").innerHTML = modalTemplate(pokemonItems);
     document.getElementById("modal-content").classList.remove("modal-closed");
     document.getElementById("overlay").classList.remove("overlay-dp-none");
@@ -25,12 +26,43 @@ function openModal(pokemonItems){
     document.getElementById("stats").classList.add("stats-dp-none");
     document.getElementById("evo-chain").classList.add("evo-dp-none");
     showEvolutionChain(pokemonItems)
+
   }
   
   function closeModal(){
     document.getElementById("overlay").classList.add("overlay-dp-none");
     document.getElementById("modal-content").classList.add("modal-closed");
   }
+
+  function nextModal(currentPokemon) {
+    let currentIndex = allPokemonItem.findIndex(pokemon => pokemon.id === currentPokemon.id);
+    if (currentIndex !== -1 && currentIndex < allPokemonItem.length - 1) {
+      let nextPokemon = allPokemonItem[currentIndex + 1];
+      document.getElementById("modal-content").innerHTML = modalTemplate(nextPokemon);
+      showEvolutionChain(currentPokemon)
+      openEvoChain()
+      
+      console.log(nextPokemon.id);
+    } else {
+      console.log("No next Pokémon available");
+    }
+  }
+  
+  function previousModal(currentPokemon) {
+    let currentIndex = allPokemonItem.findIndex(pokemon => pokemon.id === currentPokemon.id);
+    if (currentIndex > 0) {
+      let previousPokemon = allPokemonItem[currentIndex - 1];
+      document.getElementById("modal-content").innerHTML = modalTemplate(previousPokemon);
+      showEvolutionChain(currentPokemon)
+      openEvoChain()
+      
+      console.log(previousPokemon.id);
+    } else {
+      console.log("No previous Pokémon available");
+    }
+  }
+
+ 
   
   function openStats(){
     document.getElementById("main").classList.add("main-dp-none");
@@ -53,9 +85,9 @@ function openModal(pokemonItems){
   }
   
   function openEvoChain(){
-    document.getElementById("evo-chain").classList.remove("evo-dp-none");
     document.getElementById("stats").classList.add("stats-dp-none");
     document.getElementById("main").classList.add("main-dp-none");
+    document.getElementById("evo-chain").classList.remove("evo-dp-none");
     document.getElementById("evo-chain-btn").style = "border-bottom:2px solid rgb(219, 151, 25)";
     document.getElementById("stats-btn").style = "";
     document.getElementById("main-btn").style = "";

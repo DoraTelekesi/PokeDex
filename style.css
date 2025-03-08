@@ -182,3 +182,12 @@ footer {
 .spinner-dp-none {
   display: none;
 }
+
+.switch {
+  height: 30px;
+  width: 30px;
+}
+
+.switch:hover {
+  cursor: pointer;
+}

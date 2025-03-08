@@ -1,4 +1,4 @@
-let BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0"
+let BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"
 
 let allPokemonItem = [];
 let URLS = [];
@@ -14,14 +14,16 @@ function init() {
 }
 
 function loadMorePokemon(){
-  limit = 10; 
-  offset = offset + 10; 
+  limit = 20;  
+  offset = offset + 20; 
   BASE_URL =  `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
   showLoadingSpinner();
   fetchNewPokemon();
   disableLoadingSpinner();
   updateURLS();
 }
+
+
 
 function showLoadingSpinner(){
   document.getElementById("loading-screen").classList.remove("spinner-dp-none")

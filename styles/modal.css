@@ -21,7 +21,7 @@
 .modal-img-content {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -80,6 +80,7 @@
   display: none;
 }
 
+
 .overlay {
   position: fixed;
   top: 0;
@@ -92,6 +93,7 @@
 .info-body {
   display: flex;
   justify-content: center;
+  /* align-items: center; */
   padding: 20px;
   background-color: rgb(114, 182, 159);
   height: 100%;
