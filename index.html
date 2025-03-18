@@ -7,23 +7,25 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/types.css" />
     <link rel="stylesheet" href="./styles/modal.css" />
-    <link rel="icon" type="image/x-icon" href="/assets/img/Poké_Ball.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/Poké_Ball.png" />
   </head>
   <body onload="init()">
-    <div class="content">
-      <header>
-        <div class="header-content">
+    <header>
+      <div class="header-content">
+        <div class="main-logo-title" onclick="loadBack()">
           <img src="./assets/img/Poké_Ball.png" alt="Pokemon-Ball" />
           <p>Pokedex</p>
         </div>
-      </header>
-      <main>
-        <div class="search-field" id="search-field"></div>
-
+        <div class="search-field-content">
+          <div class="search-field" id="search-field"></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="content-content">
         <div class="main-content" id="main-content"></div>
-
         <div class="modal-content modal-closed" id="modal-content"></div>
-        <div class="loading-screen" id="loading-screen">
+        <div class="loading-screen spinner-dp-none" id="loading-screen">
           <img
             class="loading-img"
             src="./assets/img/pokeball-loading.gif"
@@ -42,13 +44,14 @@
         >
           Load more Pokemon
         </div>
-      </main>
-      <footer>
-        <div class="footer-content">
-          <p>Dora Telekesi 2025</p>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>Dora Telekesi 2025</p>
+      </div>
+    </footer>
+
     <script src="./script.js"></script>
     <script src="./scripts/evolutionChain.js"></script>
     <script src="./scripts/template.js"></script>
