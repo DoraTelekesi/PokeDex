@@ -23,7 +23,7 @@ This Pokedex application fetches Pokémon data from the PokeAPI and displays the
 --dark/light theme implementation
 
 ## 🌎 Live Demo  
-👉 [Pokédex App](https://your-username.github.io/your-repo/)
+👉 [Pokédex App](https://doratelekesi.github.io/PokeDex/)
 
 ## 📸 Screenshots  
 ![Main](https://github.com/DoraTelekesi/PokeDex/blob/main/Pokedex_main.png?raw=true)
